@@ -25,6 +25,8 @@ export async function POST(req: Request) {
         location: data.location,
         rooms: data.rooms || 2,
         roi_estimate: data.roi || '10%',
+        lat: data.lat,
+        lng: data.lng,
         status: 'Active'
       }])
       .select()

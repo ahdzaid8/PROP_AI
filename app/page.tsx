@@ -1,14 +1,17 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import EntryPoints from "@/components/EntryPoints";
-import AIBroker from "@/components/AIBroker";
 import FeaturedSection from "@/components/FeaturedSection";
+import Agents from "@/components/Agents";
+import InteractiveMap from "@/components/InteractiveMap";
 import db from "@/lib/db";
 
 export default async function Home() {
   // Fetch real properties from Supabase
   const { data: properties } = await db
     .from('properties_inventory')
+    .select('*');
+
+  // Fetch Elite Agents
+  const { data: agents } = await db
+    .from('agents')
     .select('*')
     .limit(3);
 
@@ -16,8 +19,14 @@ export default async function Home() {
     <div style={{ position: 'relative' }}>
       <Navbar />
       <Hero />
-      {/* Featured Properties Section (Client Component for i18n) */}
-      <FeaturedSection properties={properties || []} />
+      
+      {/* Interactive Geographical View */}
+      <InteractiveMap properties={properties || []} />
+
+      {/* Featured Properties Section */}
+      <FeaturedSection properties={properties?.slice(0, 3) || []} />
+
+      <Agents agents={agents || []} />
 
       <EntryPoints />
 

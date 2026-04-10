@@ -16,7 +16,9 @@ export default function AdminDashboard() {
     price: '',
     location: '',
     rooms: 2,
-    roi: '10%'
+    roi: '10%',
+    lat: 25.1972,
+    lng: 55.2744
   });
 
   useEffect(() => {
@@ -85,7 +87,7 @@ export default function AdminDashboard() {
       });
       if (resp.ok) {
         fetchProps();
-        setFormData({ transaction_type: 'Sale', price: '', location: '', rooms: 2, roi: '10%' });
+        setFormData({ transaction_type: 'Sale', price: '', location: '', rooms: 2, roi: '10%', lat: 25.1972, lng: 55.2744 });
       }
     } catch (err) {
       console.error(err);
@@ -269,14 +271,25 @@ export default function AdminDashboard() {
                     style={{ padding: '15px', borderRadius: '4px', border: '1px solid #EEE', background: '#F8F9FA', fontWeight: 700, color: '#333' }} 
                   />
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <label style={{ fontSize: '11px', fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase' }}>Geolocation</label>
-                  <input 
-                    placeholder="e.g. Downtown Dubai" 
-                    value={formData.location}
-                    onChange={e => setFormData({...formData, location: e.target.value})}
-                    style={{ padding: '15px', borderRadius: '4px', border: '1px solid #EEE', background: '#F8F9FA', fontWeight: 700, color: '#333' }} 
-                  />
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <label style={{ fontSize: '11px', fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase' }}>Latitude</label>
+                    <input 
+                      type="number" step="any"
+                      value={formData.lat}
+                      onChange={e => setFormData({...formData, lat: parseFloat(e.target.value)})}
+                      style={{ padding: '15px', borderRadius: '4px', border: '1px solid #EEE', background: '#F8F9FA', fontWeight: 700, color: '#333' }} 
+                    />
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <label style={{ fontSize: '11px', fontWeight: 900, color: 'var(--accent-gold)', textTransform: 'uppercase' }}>Longitude</label>
+                    <input 
+                      type="number" step="any"
+                      value={formData.lng}
+                      onChange={e => setFormData({...formData, lng: parseFloat(e.target.value)})}
+                      style={{ padding: '15px', borderRadius: '4px', border: '1px solid #EEE', background: '#F8F9FA', fontWeight: 700, color: '#333' }} 
+                    />
+                  </div>
                 </div>
                 <button className="btn-primary" type="submit" style={{ marginTop: '20px', padding: '20px' }}>Deploy to Platform</button>
               </form>
