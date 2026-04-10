@@ -1,3 +1,7 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import EntryPoints from "@/components/EntryPoints";
+import AIBroker from "@/components/AIBroker";
 import FeaturedSection from "@/components/FeaturedSection";
 import Agents from "@/components/Agents";
 import InteractiveMap from "@/components/InteractiveMap";
