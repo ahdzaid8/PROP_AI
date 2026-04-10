@@ -30,8 +30,20 @@ export default async function Home() {
         marginTop: '0',
         background: '#080808'
       }}>
-        <div className="container">
-          <div style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'center', gap: '5rem', opacity: 0.8, fontSize: '13px', textTransform: 'uppercase', fontWeight: 900, letterSpacing: '3px', color: '#FFFFFF' }}>
+        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ 
+            marginBottom: '4rem', 
+            display: 'flex', 
+            justifyContent: 'center', 
+            gap: '2rem', 
+            flexWrap: 'wrap',
+            opacity: 0.8, 
+            fontSize: '11px', 
+            textTransform: 'uppercase', 
+            fontWeight: 900, 
+            letterSpacing: '2px', 
+            color: '#FFFFFF' 
+          }}>
             <span>Project Sale</span>
             <span>Asset Buy</span>
             <span>Elite Rent</span>

@@ -25,8 +25,8 @@ export default function PropertyGrid({ properties }: { properties: Property[] })
   return (
     <div style={{ 
       display: 'grid', 
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '2.5rem'
+      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+      gap: '2rem'
     }}>
       {properties.map((p, idx) => (
         <Link 

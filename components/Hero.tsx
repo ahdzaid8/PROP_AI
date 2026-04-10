@@ -50,9 +50,9 @@ export default function Hero() {
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '60px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
           
-          <div style={{ flex: '1', minWidth: '320px' }}>
+          <div style={{ flex: '1', minWidth: '280px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: 'var(--accent-gold)', marginBottom: '1.5rem' }}>
               <Sparkles size={18} fill="currentColor" />
               <span style={{ fontSize: '11px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '4px' }}>
