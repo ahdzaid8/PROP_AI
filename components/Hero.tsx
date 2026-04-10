@@ -34,7 +34,7 @@ export default function Hero() {
       position: 'relative', 
       overflow: 'hidden',
       background: 'linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%)', 
-      paddingTop: '160px',
+      paddingTop: 'clamp(100px, 15vh, 160px)',
       paddingBottom: '40px'
     }}>
       {/* Background Ambience */}
@@ -104,13 +104,15 @@ export default function Hero() {
 
           {/* DYNAMIC IMAGE SLIDER ON THE RIGHT */}
           <div style={{ 
-            width: '500px', 
-            height: '380px', 
+            width: '100%',
+            maxWidth: '500px', 
+            height: 'clamp(280px, 40vh, 380px)', 
             position: 'relative',
             borderRadius: '4px',
             boxShadow: '0 40px 80px rgba(23, 37, 84, 0.15)',
             border: '4px solid var(--accent-gold)',
-            outline: '6px solid #FFFFFF'
+            outline: '6px solid #FFFFFF',
+            margin: '0 auto'
           }}>
             <AnimatePresence mode="wait">
               <motion.img 

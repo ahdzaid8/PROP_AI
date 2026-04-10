@@ -111,7 +111,7 @@ export default function AIBroker() {
             boxShadow: '0 10px 40px rgba(212, 175, 55, 0.4)',
             cursor: 'pointer',
             border: 'none',
-            zIndex: 2000
+            zIndex: 4000
           }}
         >
           <MessageSquare size={28} />
@@ -128,16 +128,19 @@ export default function AIBroker() {
             className="glass"
             style={{
               position: 'fixed',
-              bottom: '30px',
-              right: '30px',
-              width: '380px',
-              height: '550px',
-              zIndex: 2001,
+              bottom: '20px',
+              right: '20px',
+              width: '100%',
+              maxWidth: '380px',
+              height: 'calc(100% - 40px)',
+              maxHeight: '600px',
+              zIndex: 6001,
               display: 'flex',
               flexDirection: 'column',
               overflow: 'hidden',
               boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
-              borderBottom: '4px solid var(--accent-gold)'
+              borderBottom: '4px solid var(--accent-gold)',
+              borderRadius: '12px'
             }}
           >
             {/* Header */}

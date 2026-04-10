@@ -48,7 +48,7 @@ export default function EntryPoints() {
   ];
 
   return (
-    <section className="container" style={{ padding: '40px' }}>
+    <section className="container">
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
         <h2 style={{ fontSize: '2.2rem', marginBottom: '0.5rem', fontWeight: 900, color: 'var(--charcoal)' }}>
           {t.entryPoints.dreamHeader} <span className="gold-text">{t.entryPoints.dreamSub}</span>
