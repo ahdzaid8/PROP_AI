@@ -8,34 +8,36 @@ export default function AboutPage() {
       
       {/* HERO SECTION */}
       <section style={{ 
-        padding: '220px 0 120px', 
+        padding: 'clamp(120px, 20vh, 180px) 0 clamp(60px, 10vh, 100px)', 
         background: 'linear-gradient(180deg, rgba(184, 150, 12, 0.05) 0%, #080808 100%)',
         textAlign: 'center'
       }}>
         <div className="container">
           <span style={{ 
-            fontSize: '12px', 
+            fontSize: '10px', 
             fontWeight: 900, 
             textTransform: 'uppercase', 
-            letterSpacing: '5px', 
+            letterSpacing: '4px', 
             color: 'var(--accent-gold)',
-            marginBottom: '2rem',
+            marginBottom: '1.5rem',
             display: 'block'
           }}>Establishing Excellence</span>
-          <h1 style={{ fontSize: '5rem', fontWeight: 900, marginBottom: '2.5rem' }}>Legacy in <span className="gold-text">Intelligence</span></h1>
-          <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.25rem', opacity: 0.7, lineHeight: '1.8', fontStyle: 'italic' }}>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 5rem)', fontWeight: 900, marginBottom: '2rem', lineHeight: 1.1 }}>
+            Legacy in <span className="gold-text">Intelligence</span>
+          </h1>
+          <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(1rem, 2vw, 1.25rem)', opacity: 0.7, lineHeight: '1.8' }}>
             At PROP_AI, we blend modern computational intelligence with deep-rooted real estate expertise to provide unparalleled transparency in the luxury market.
           </p>
         </div>
       </section>
 
       {/* CORE STATS / VALUES */}
-      <section style={{ padding: '40px 0 120px' }}>
+      <section style={{ padding: '40px 0 80px' }}>
         <div className="container">
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '3rem' 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+            gap: '2rem' 
           }}>
             {[
               { icon: <Shield />, label: "Security & Trust", desc: "Our platform ensures end-to-end encrypted transactions for elite investors." },
@@ -69,14 +71,19 @@ export default function AboutPage() {
       <section style={{ 
         background: '#FFFFFF', 
         color: '#080808',
-        padding: '140px 0'
+        padding: '80px 0'
       }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}>
+        <div className="container" style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+          gap: '40px', 
+          alignItems: 'center' 
+        }}>
           <div>
-            <h2 style={{ fontSize: '3.5rem', fontWeight: 900, marginBottom: '2.5rem', color: '#080808' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, marginBottom: '1.5rem', color: '#080808', lineHeight: 1.1 }}>
               Redefining <span className="gold-text">Modern</span> Brokerage
             </h2>
-            <p style={{ fontSize: '1.15rem', opacity: 0.8, lineHeight: 2, marginBottom: '3rem' }}>
+            <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.8, marginBottom: '2rem' }}>
               Founded in 2026, PROP_AI emerged from the intersection of high-frequency trading technology and luxury asset management. We recognized that the modern investor values data as much as design.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -89,18 +96,18 @@ export default function AboutPage() {
             </div>
           </div>
           <div style={{ 
-            height: '600px', 
+            height: 'clamp(300px, 50vh, 500px)', 
             background: '#EEE', 
             borderRadius: '4px',
-            border: '8px solid var(--accent-gold)',
+            border: '4px solid var(--accent-gold)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontSize: '13px',
-            opacity: 0.3,
+            fontSize: '11px',
+            opacity: 0.5,
             fontWeight: 800,
             textTransform: 'uppercase',
-            letterSpacing: '5px'
+            letterSpacing: '4px'
           }}>
             [PREMIUM VISUAL: DUBAI SKYLINE]
           </div>

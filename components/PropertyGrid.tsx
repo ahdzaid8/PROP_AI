@@ -23,7 +23,7 @@ export default function PropertyGrid({ properties }: { properties: Property[] })
   ];
 
   return (
-    <div style={{ 
+    <div className="property-grid" style={{ 
       display: 'grid', 
       gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
       gap: '2rem'

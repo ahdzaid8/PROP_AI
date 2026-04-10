@@ -35,13 +35,13 @@ export default function BrokeragePage() {
     <div style={{ background: 'var(--deep-luxury)', minHeight: '100vh' }}>
       <Navbar />
       
-      <main style={{ paddingTop: '160px' }}>
+      <main style={{ paddingTop: 'clamp(100px, 15vh, 160px)' }}>
         <section className="container">
-          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-            <h1 style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--charcoal)', marginBottom: '20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 900, color: 'var(--charcoal)', marginBottom: '1.5rem', lineHeight: 1.1 }}>
               {lang === 'EN' ? "Institutional" : "الوساطة"} <span className="gold-text">{lang === 'EN' ? "Brokerage" : "المؤسسية"}</span>
             </h1>
-            <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: '1.25rem', opacity: 0.8, color: 'var(--charcoal)', lineHeight: '1.8' }}>
+            <p style={{ maxWidth: '800px', margin: '0 auto', fontSize: 'clamp(1rem, 2vw, 1.25rem)', opacity: 0.8, color: 'var(--charcoal)', lineHeight: '1.8' }}>
               {lang === 'EN' 
                 ? "PROP_AI facilitates the world's most complex real estate transactions through a fusion of human expertise and machine intelligence."
                 : "تسهل بروب_أي المعاملات العقارية الأكثر تعقيداً في العالم من خلال دمج الخبرة البشرية والذكاء الاصطناعي."}
@@ -50,9 +50,9 @@ export default function BrokeragePage() {
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '3rem',
-            marginBottom: '100px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+            gap: '2rem',
+            marginBottom: '60px'
           }}>
             {services.map((item, idx) => (
               <motion.div 
@@ -70,13 +70,13 @@ export default function BrokeragePage() {
 
           <div style={{ 
             background: 'var(--charcoal)', 
-            padding: '80px', 
+            padding: 'clamp(40px, 10vw, 80px)', 
             borderRadius: '4px', 
             color: '#FFFFFF', 
             textAlign: 'center',
-            marginBottom: '100px'
+            marginBottom: '80px'
           }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '30px' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', fontWeight: 900, marginBottom: '1.5rem', lineHeight: 1.2 }}>
               {lang === 'EN' ? "Initiate Your Transaction" : "ابدأ معاملتك الآن"}
             </h2>
             <p style={{ marginBottom: '40px', opacity: 0.8, fontSize: '1.1rem' }}>

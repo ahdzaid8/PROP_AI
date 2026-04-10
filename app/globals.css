@@ -123,13 +123,18 @@ section {
 
 @media (max-width: 768px) {
   section {
-    padding: 40px 0;
+    padding: 60px 0;
   }
   .hidden-sm {
     display: none !important;
   }
   .show-sm {
     display: block !important;
+  }
+  /* Force single column for luxury property cards on mobile */
+  .property-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
 }
 

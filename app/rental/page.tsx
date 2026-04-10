@@ -15,17 +15,17 @@ export default async function RentalPage() {
       <Navbar />
       
       <section style={{ 
-        padding: '220px 0 100px', 
+        padding: 'clamp(120px, 20vh, 180px) 0 clamp(60px, 10vh, 100px)', 
         background: 'linear-gradient(180deg, rgba(184, 150, 12, 0.05) 0%, #080808 100%)',
         textAlign: 'center'
       }}>
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', color: 'var(--accent-gold)', marginBottom: '1.5rem' }}>
-            <Star size={20} fill="currentColor" />
-            <span style={{ fontSize: '12px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '5px' }}>Elite Residency</span>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', color: 'var(--accent-gold)', marginBottom: '1rem' }}>
+            <Star size={18} fill="currentColor" />
+            <span style={{ fontSize: '10px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '4px' }}>Elite Residency</span>
           </div>
-          <h1 style={{ fontSize: '4.5rem', fontWeight: 900, marginBottom: '20px' }}>Luxury <span className="gold-text">Rentals</span></h1>
-          <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.25rem', opacity: 0.6, lineHeight: '1.8' }}>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', fontWeight: 900, marginBottom: '20px', lineHeight: 1.1 }}>Luxury <span className="gold-text">Rentals</span></h1>
+          <p style={{ maxWidth: '700px', margin: '0 auto', fontSize: 'clamp(1rem, 2vw, 1.25rem)', opacity: 0.6, lineHeight: '1.8' }}>
             Experience the pinnacle of Dubai living. Our curated list of short and long-term rentals offers full AI-vetting and world-class concierge support.
           </p>
         </div>
