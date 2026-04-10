@@ -93,9 +93,9 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', background: '#080808', color: '#FFFFFF' }}>
+    <div className="admin-layout" style={{ display: 'flex', minHeight: '100vh', background: '#080808', color: '#FFFFFF' }}>
       {/* Sidebar */}
-      <aside style={{ 
+      <aside className="admin-sidebar" style={{ 
         width: '300px', 
         background: '#FFFFFF', 
         borderRight: '1px solid rgba(184, 150, 12, 0.2)', 
@@ -155,17 +155,17 @@ export default function AdminDashboard() {
       </aside>
 
       {/* Main Content */}
-      <main style={{ flex: 1, padding: '60px 80px' }}>
-        <header style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+      <main className="admin-main" style={{ flex: 1, padding: '60px 80px' }}>
+        <header className="admin-header" style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <div>
-            <h1 style={{ fontSize: '3.5rem', fontWeight: 900, color: '#FFFFFF', marginBottom: '10px', fontFamily: 'var(--font-heading)' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#FFFFFF', marginBottom: '10px', fontFamily: 'var(--font-heading)', lineHeight: 1.1 }}>
               {activeTab === 'leads' ? 'Leads Performance' : 'Inventory Management'}
             </h1>
             <p style={{ opacity: 0.5, fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', fontSize: '11px' }}>
               Real-time synchronization with PROP_AI Cloud.
             </p>
           </div>
-          <div className="glass" style={{ padding: '20px 40px', display: 'flex', alignItems: 'center', gap: '30px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(184, 150, 12, 0.3)' }}>
+          <div className="glass admin-stat-box" style={{ padding: '20px 40px', display: 'flex', alignItems: 'center', gap: '30px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(184, 150, 12, 0.3)' }}>
             <div style={{ textAlign: 'right' }}>
               <div style={{ fontSize: '10px', opacity: 0.5, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 800, marginBottom: '5px' }}>Active Leads</div>
               <div style={{ fontSize: '24px', fontWeight: 900, color: 'var(--accent-gold)' }}>{leads.length}</div>
@@ -181,7 +181,7 @@ export default function AdminDashboard() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 key={lead.id} 
-                className="glass" 
+                className="glass admin-card" 
                 style={{ 
                   padding: '40px', 
                   display: 'grid', 
@@ -215,7 +215,7 @@ export default function AdminDashboard() {
                     {lead.lead_score}
                   </span>
                 </div>
-                <div style={{ display: 'flex', gap: '15px', justifyContent: 'flex-end' }}>
+                <div className="admin-card-actions" style={{ display: 'flex', gap: '15px', justifyContent: 'flex-end' }}>
                   <button style={{ background: '#F8F9FA', border: '1px solid #EEE', padding: '12px', borderRadius: '4px', cursor: 'pointer', color: 'var(--accent-gold)', transition: '0.2s' }}>
                     <MessageCircle size={22} />
                   </button>
@@ -227,7 +227,7 @@ export default function AdminDashboard() {
             ))}
           </div>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 400px', gap: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               {props.map(p => (
                 <div key={p.id} className="glass" style={{ padding: '30px', display: 'flex', gap: '30px', background: '#FFFFFF', alignItems: 'center', borderRadius: '2px' }}>

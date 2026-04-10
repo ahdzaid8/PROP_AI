@@ -172,3 +172,47 @@ section {
   font-weight: 700;
   text-transform: capitalize;
 }
+
+/* Admin Portal Mobile Refinement */
+@media (max-width: 1024px) {
+  .admin-layout {
+    flex-direction: column !important;
+  }
+
+  .admin-sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 2px solid var(--accent-gold) !important;
+    padding: 30px 20px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+  }
+
+  .admin-main {
+    padding: 40px 20px !important;
+  }
+
+  .admin-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+  }
+
+  .admin-stat-box {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .admin-card {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 25px !important;
+  }
+
+  .admin-card-actions {
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    border-top: 1px solid rgba(0,0,0,0.05) !important;
+    padding-top: 15px !important;
+    margin-top: 10px !important;
+  }
+}
